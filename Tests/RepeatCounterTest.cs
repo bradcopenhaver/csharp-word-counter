@@ -49,5 +49,16 @@ namespace WordCounter
       //Assert
       Assert.Equal(expectedResult, result);
     }
+    [Fact]
+    public void CountRepeats_CaseInsensitive_true()
+    {
+      //Arrange
+      int expectedResult = 8;
+      RepeatCounter newCounter = new RepeatCounter("buffalo", "Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo");
+      //Act
+      int result = newCounter.CountRepeats();
+      //Assert
+      Assert.Equal(expectedResult, result);
+    }
   }
 }
