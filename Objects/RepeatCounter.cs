@@ -1,3 +1,4 @@
+using System;
 
 namespace WordCounter.Objects
 {
@@ -16,9 +17,17 @@ namespace WordCounter.Objects
     public int CountRepeats()
     {
       string[] words = _inputText.ToLower().Split(' ');
-      foreach(string word in words)
+      for(int i = 0; i < words.Length; i++)
       {
-        if(_inputSearch == word)
+        while(Char.IsPunctuation(words[i][0]))
+        {
+          words[i] = words[i].Remove(0, 1);
+        }
+        while(Char.IsPunctuation(words[i][words[i].Length-1]))
+        {
+          words[i] = words[i].Remove(words[i].Length-1, 1);
+        }
+        if(_inputSearch == words[i])
         {
           _totalMatches++;
         }

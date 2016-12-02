@@ -16,33 +16,29 @@ _This program will..._
  * Output: 0
  * Why this is simple: No comparison or change in output is necessary if the search term is not present.
 
-
 2. Return "1" if the search term matches the given text.
  * Input: "spoon", "spoon"
  * Output: 1
  * Why this is simple: Only one comparison of search term to text is necessary to determine a match and change the output.
-
 
 3. Return "1" if the search term is present in the given text.
  * Input: "spoon", "there is no spoon"
  * Output: 1
  * Why this is simple: The search term must be compared to each word in the text until one match is found and changes the output.
 
-
 4. Return the number of instances of the search term in the given text.
  * Input: "rose", "rose is a rose"
  * Output: 2
  * Why this is simple: The search term must continue to be compared to each word in the text even after one match is found, and the output must be changed with each successful match.
-
 
 5. Match the search term regardless of case.
  * Input: "buffalo", "Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo"
  * Output: 8
  * Why this is simple: The search term must match instances that are the same word but not equivalent strings.
 
-6. Ignore punctuation.
- * Input: "round", "The wheels on the bus go round and round. Round and round. Round and round."
- * Output: 6
+6. Ignore punctuation at the beginning and end of each word in the given text.
+ * Input: "can't", "He said, 'I can't.'"
+ * Output: 1
  * Why this is simple: Certain parts of the text must be ignored before comparison.
 
 ## Setup/Installation Requirements

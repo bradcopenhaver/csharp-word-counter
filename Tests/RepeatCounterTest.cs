@@ -60,5 +60,16 @@ namespace WordCounter
       //Assert
       Assert.Equal(expectedResult, result);
     }
+    [Fact]
+    public void CountRepeats_IgnorePunctuation_true()
+    {
+      //Arrange
+      int expectedResult = 1;
+      RepeatCounter newCounter = new RepeatCounter("can't", "He said, 'I can't.'");
+      //Act
+      int result = newCounter.CountRepeats();
+      //Assert
+      Assert.Equal(expectedResult, result);
+    }
   }
 }
