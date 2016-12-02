@@ -15,6 +15,10 @@ namespace WordCounter.Objects
 
     public int CountRepeats()
     {
+      if(_inputSearch == _inputText)
+      {
+        _totalMatches++;
+      }
       return _totalMatches;
     }
   }

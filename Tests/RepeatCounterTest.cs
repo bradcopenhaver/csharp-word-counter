@@ -16,5 +16,16 @@ namespace WordCounter
       //Assert
       Assert.Equal(expectedResult, result);
     }
+    [Fact]
+    public void CountRepeats_CompleteMatch_true()
+    {
+      //Arrange
+      int expectedResult = 1;
+      RepeatCounter newCounter = new RepeatCounter("spoon", "spoon");
+      //Act
+      int result = newCounter.CountRepeats();
+      //Assert
+      Assert.Equal(expectedResult, result);
+    }
   }
 }
