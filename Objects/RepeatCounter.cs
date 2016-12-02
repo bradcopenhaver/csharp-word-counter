@@ -15,9 +15,13 @@ namespace WordCounter.Objects
 
     public int CountRepeats()
     {
-      if(_inputSearch == _inputText)
+      string[] words = _inputText.Split(' ');
+      foreach(string word in words)
       {
-        _totalMatches++;
+        if(_inputSearch == word)
+        {
+          _totalMatches++;
+        }
       }
       return _totalMatches;
     }

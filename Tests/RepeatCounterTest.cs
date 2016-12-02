@@ -27,5 +27,16 @@ namespace WordCounter
       //Assert
       Assert.Equal(expectedResult, result);
     }
+    [Fact]
+    public void CountRepeats_OneMatch_true()
+    {
+      //Arrange
+      int expectedResult = 1;
+      RepeatCounter newCounter = new RepeatCounter("spoon", "there is no spoon");
+      //Act
+      int result = newCounter.CountRepeats();
+      //Assert
+      Assert.Equal(expectedResult, result);
+    }
   }
 }
