@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="/Content/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="/Content/css/styles.css" rel="stylesheet" type="text/css">
+    <title>Word Counter</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Word Counter</h1>
+          <h4>Search a block of text for any word and count how many times the word appears.</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <form action="/result" method="post">
+            <div class="form-group">
+              <label for="searchWord">Enter the word you want to look for:</label>
+              <input type="text" name="searchWord">
+            </div>
+        </div>
+        <div class="col-md-8">
+          <div class="form-group">
+            <label for="searchText">Enter the block of text to look through:</label>
+            <textarea name="searchText" rows="8" cols="80"></textarea>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

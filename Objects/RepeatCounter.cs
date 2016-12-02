@@ -19,11 +19,11 @@ namespace WordCounter.Objects
       string[] words = _inputText.ToLower().Split(' ');
       for(int i = 0; i < words.Length; i++)
       {
-        while(Char.IsPunctuation(words[i][0]))
+        while(words[i].Length > 0 && Char.IsPunctuation(words[i][0]))
         {
           words[i] = words[i].Remove(0, 1);
         }
-        while(Char.IsPunctuation(words[i][words[i].Length-1]))
+        while(words[i].Length > 0 && Char.IsPunctuation(words[i][words[i].Length-1]))
         {
           words[i] = words[i].Remove(words[i].Length-1, 1);
         }
@@ -32,6 +32,18 @@ namespace WordCounter.Objects
           _totalMatches++;
         }
       }
+      return _totalMatches;
+    }
+    public string GetInputSearch()
+    {
+      return _inputSearch;
+    }
+    public string GetInputText()
+    {
+      return _inputText;
+    }
+    public int GetTotalMatches()
+    {
       return _totalMatches;
     }
   }
