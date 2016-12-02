@@ -38,5 +38,16 @@ namespace WordCounter
       //Assert
       Assert.Equal(expectedResult, result);
     }
+    [Fact]
+    public void CountRepeats_MultipleMatches_true()
+    {
+      //Arrange
+      int expectedResult = 2;
+      RepeatCounter newCounter = new RepeatCounter("rose", "rose is a rose");
+      //Act
+      int result = newCounter.CountRepeats();
+      //Assert
+      Assert.Equal(expectedResult, result);
+    }
   }
 }

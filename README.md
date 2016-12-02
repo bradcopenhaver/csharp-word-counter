@@ -30,7 +30,7 @@ _This program will..._
 
 
 4. Return the number of instances of the search term in the given text.
- * Input: "rose", "a rose is a rose"
+ * Input: "rose", "rose is a rose"
  * Output: 2
  * Why this is simple: The search term must continue to be compared to each word in the text even after one match is found, and the output must be changed with each successful match.
 
