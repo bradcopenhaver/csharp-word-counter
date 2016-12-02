@@ -10,20 +10,22 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1>Word Counter</h1>
-          <h4>Search a block of text for any word and count how many times the word appears.</h4>
+          <div class="well">
+            <h1>Word Counter</h1>
+            <p>Search a block of text for any word and count how many times that word appears.</p>
+          </div>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12">
           @if(Model.GetTotalMatches() == 1)
           {
-            <h4>The word @Model.GetInputSearch() appears @Model.GetTotalMatches() time
+            <h4>The word "@Model.GetInputSearch()" appears @Model.GetTotalMatches() time
             in the text you searched.</h4>
           }
           else
           {
-            <h4>The word @Model.GetInputSearch() appears @Model.GetTotalMatches() times
+            <h4>The word "@Model.GetInputSearch()" appears @Model.GetTotalMatches() times
             in the text you searched.</h4>
           }
 
